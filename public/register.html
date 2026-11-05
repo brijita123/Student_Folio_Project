@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register | Student Folio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="auth-page">
+  <a class="brand auth-brand" href="/">Student Folio</a>
+  <main class="auth-card">
+    <p class="eyebrow">LET'S GET STARTED</p>
+    <h1>Create account</h1>
+    <p class="muted">Register to start managing your student folio.</p>
+    <form id="registerForm">
+      <label for="name">Full name</label>
+      <input id="name" name="name" required placeholder="Enter your name">
+      <label for="email">Email address</label>
+      <input id="email" name="email" type="email" required placeholder="you@example.com">
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password" minlength="4" required placeholder="At least 4 characters">
+      <button class="button full" type="submit">Register</button>
+      <p id="message" class="message" aria-live="polite"></p>
+    </form>
+    <p class="switch-link">Already have an account? <a href="/login.html">Login</a></p>
+  </main>
+  <footer>© 2026 Student Folio</footer>
+</body>
+</html>

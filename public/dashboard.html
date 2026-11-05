@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Student Folio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="dashboard-page">
+  <header class="topbar">
+    <a class="brand" href="/">Student Folio</a>
+    <div class="nav-right"><span id="welcomeName" class="welcome-name"></span><button id="logoutButton" class="button small secondary">Logout</button></div>
+  </header>
+  <main class="dashboard">
+    <section class="dashboard-heading">
+      <p class="eyebrow">YOUR SPACE</p>
+      <h1>Student dashboard</h1>
+      <p class="muted">Add your portfolio details and keep your information up to date.</p>
+    </section>
+    <div class="dashboard-grid">
+      <section class="panel">
+        <h2 id="formTitle">Add portfolio details</h2>
+        <form id="studentForm">
+          <input type="hidden" id="recordId">
+          <label for="studentName">Student name</label>
+          <input id="studentName" required placeholder="Your full name">
+          <label for="course">Course / Department</label>
+          <input id="course" required placeholder="e.g. BCA">
+          <label for="studentEmail">Email</label>
+          <input id="studentEmail" type="email" required placeholder="you@example.com">
+          <label for="skills">Skills</label>
+          <input id="skills" placeholder="e.g. HTML, CSS, Drawing">
+          <label for="about">About me</label>
+          <textarea id="about" rows="4" placeholder="Write a short introduction"></textarea>
+          <div class="form-actions">
+            <button class="button" type="submit" id="saveButton">Save details</button>
+            <button class="button secondary" type="button" id="cancelEdit" hidden>Cancel</button>
+          </div>
+          <p id="dashboardMessage" class="message" aria-live="polite"></p>
+        </form>
+      </section>
+      <section class="panel records-panel">
+        <div class="records-heading"><div><h2>Saved portfolio details</h2><p class="muted">Your records stored in MongoDB</p></div><span id="recordCount" class="count">0</span></div>
+        <div id="recordsList" class="records-list"></div>
+      </section>
+    </div>
+  </main>
+  <footer>© 2026 Student Folio · Keep learning and growing</footer>
+</body>
+</html>
